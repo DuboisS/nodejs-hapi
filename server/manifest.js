@@ -39,22 +39,21 @@ module.exports = new Confidence.Store({
             },
             {
                 plugin: 'schwifty',
-                options: {
-                    $filter: 'NODE_ENV',
-                    $default: {},
-                    $base: {
-                        migrateOnStart: true,
-                        knex: {
-                            client: 'sqlite3',
-                            useNullAsDefault: true,     // Suggested for sqlite3
-                            connection: {
-                                filename: ':memory:'
-                            },
-                            migrations: {
-                                stub: Schwifty.migrationsStubPath
+                options : {
+                    $filter    : 'NODE_ENV',
+                    $default   : {},
+                    $base      : {
+                        migrateOnStart : true,
+                        knex           : {
+                            client     : 'mysql',
+                            connection : {
+                                host     : process.env.DB_HOST || '0.0.0.0',
+                                user     : process.env.DB_USER || 'root',
+                                password : process.env.DB_PASSWORD || '',
+                                database : process.env.DB_DATABASE || 'hapi'
                             }
                         }
-                    },
+                },
                     production: {
                         migrateOnStart: false
                     }

@@ -15,10 +15,13 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@hapi/boom": "9.x.x",
+    "@duboiss/encrypt": "^1.0.1",
+    "@hapi/boom": "^9.1.1",
     "haute-couture": "3.x.x",
     "joi": "17.x.x",
+    "mysql": "^2.18.1",
     "objection": "^2.2.7",
+    "schmervice": "^1.6.0",
     "schwifty": "^5.4.1"
   },
   "peerDependencies": {
