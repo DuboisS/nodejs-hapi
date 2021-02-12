@@ -17,6 +17,7 @@
   "dependencies": {
     "@duboiss/encrypt": "^1.0.1",
     "@hapi/boom": "^9.1.1",
+    "@hapi/jwt": "^2.0.1",
     "haute-couture": "3.x.x",
     "joi": "17.x.x",
     "mysql": "^2.18.1",
