@@ -2,6 +2,9 @@
 
 const Glue = require('@hapi/glue');
 const Manifest = require('./manifest');
+const dotenv = require('dotenv');
+
+dotenv.config({ path: '.env.local' });
 
 exports.deployment = async (start) => {
 
